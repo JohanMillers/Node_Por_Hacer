@@ -24,7 +24,10 @@ switch (comando) {
         }
         break;
     case 'actualizar':
-        console.log('actualizar todas la tarea por hacer');
+        let actualizado = porHacer.actualizar(argv.descripcion,argv.completado);
+
+        console.log(actualizado);
+        
         break;
 
     default:
