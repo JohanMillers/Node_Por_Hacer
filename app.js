@@ -19,17 +19,17 @@ switch (comando) {
             console.log(tarea.descripcion);
             console.log('Estado: ', tarea.completado);
             console.log('========================='.green);
-
-
         }
         break;
     case 'actualizar':
         let actualizado = porHacer.actualizar(argv.descripcion,argv.completado);
-
         console.log(actualizado);
-        
         break;
 
+    case 'borrar':
+        let borrando = porHacer.borrar(argv.descripcion);
+        console.log(borrando);
+        break;
     default:
         console.log('Comando no reconocido');
 
